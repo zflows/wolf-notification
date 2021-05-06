@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+      <PackageReference Include="IdentityModel" Version="5.1.0" />
+      <PackageReference Include="MailKit" Version="2.10.1" />
+      <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="3.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+		  <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+		  <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
+		  <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.14" />
+		  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		  <PackageReference Include="NSwag.ApiDescription.Client" Version="13.10.9">
+		    <PrivateAssets>all</PrivateAssets>
+		    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  </PackageReference>
+		  <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+		  <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+		  <PackageReference Include="Serilog.Extensions.Hosting" Version="3.1.0" />
+		  <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0-dev-00839" />
+      <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+      <PackageReference Include="Serilog.Sinks.File" Version="5.0.0-dev-00887" />
+      <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
+      <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
+      <PackageReference Include="System.Text.Json" Version="5.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wolf.MessageQueue\Wolf.MessageQueue.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.prod.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.staging.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+	<ItemGroup>
+		<OpenApiReference Include="OpenAPIs\NotifApiSwagger.json" CodeGenerator="NSwagCSharp" Namespace="Wolf.Notification.EmailSender.OpenAPIs">
+			<ClassName>Notif{controller}Client</ClassName>
+			<SourceUri>http://earth:5380/swagger/v2.0/swagger.json</SourceUri>
+			<Options>/OperationGenerationMode:MultipleClientsFromFirstTagAndPathSegments /GenerateClientInterfaces:true /GeneratePrepareRequestAndProcessResponseAsAsyncMethods:true /ClientBaseClass:NotifClientBase /ConfigurationClass:NotifApiOptions /AdditionalNamespaceUsages:Wolf.Notification.EmailSender.Config </Options>
+		</OpenApiReference>
+	</ItemGroup>
+</Project>

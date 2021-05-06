@@ -1,0 +1,22 @@
+{
+    "tokenValues":{
+       "names":[
+          {
+             "name":"alex",
+             "client":"b"
+          },
+          {
+             "name":"c",
+             "client":"d"
+          }
+       ],
+       "client":{
+          "name":"aaaalex"
+       },
+       "device":"apple_macbook"
+    },
+    "recipients":[
+       "2386612@gmail.com"
+    ]
+}
+//  b0bea61d-4ada-4f5b-77f5-08d7b2e9b575

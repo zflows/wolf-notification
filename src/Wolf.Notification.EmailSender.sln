@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wolf.Notification.EmailSender", "Wolf.Notification.EmailSender\Wolf.Notification.EmailSender.csproj", "{B60EC27B-A1DD-4E62-848B-437C1A1DBA03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wolf.Notification", "Wolf.Notification\Wolf.Notification.csproj", "{0A41E438-CCDF-4159-A5A0-8E961CFC6392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29039EAD-4EC6-4481-8289-CD9C20318EF3}"
+	ProjectSection(SolutionItems) = preProject
+		..\docker-compose.yml = ..\docker-compose.yml
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wolf.MessageQueue", "Wolf.MessageQueue\Wolf.MessageQueue.csproj", "{5DFE83EF-45A8-49A4-8AC2-3BC50ED296CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wolf.Notification.Tests", "Wolf.Notification.Tests\Wolf.Notification.Tests.csproj", "{5592CD28-3E8B-4837-9BFD-067E92FC7EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B60EC27B-A1DD-4E62-848B-437C1A1DBA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60EC27B-A1DD-4E62-848B-437C1A1DBA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60EC27B-A1DD-4E62-848B-437C1A1DBA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60EC27B-A1DD-4E62-848B-437C1A1DBA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A41E438-CCDF-4159-A5A0-8E961CFC6392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A41E438-CCDF-4159-A5A0-8E961CFC6392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A41E438-CCDF-4159-A5A0-8E961CFC6392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A41E438-CCDF-4159-A5A0-8E961CFC6392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFE83EF-45A8-49A4-8AC2-3BC50ED296CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFE83EF-45A8-49A4-8AC2-3BC50ED296CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFE83EF-45A8-49A4-8AC2-3BC50ED296CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFE83EF-45A8-49A4-8AC2-3BC50ED296CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5592CD28-3E8B-4837-9BFD-067E92FC7EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5592CD28-3E8B-4837-9BFD-067E92FC7EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5592CD28-3E8B-4837-9BFD-067E92FC7EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5592CD28-3E8B-4837-9BFD-067E92FC7EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55BAA6E2-A3EE-4F55-820C-3F001280D11D}
+	EndGlobalSection
+EndGlobal

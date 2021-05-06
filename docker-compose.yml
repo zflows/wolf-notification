@@ -1,0 +1,78 @@
+version: "3"
+services:
+  redis:
+    image: "redis:alpine"
+    ports:
+      - 6379:6379
+  sql_express:
+    image: "mcr.microsoft.com/mssql/server:2019-CU1-ubuntu-16.04"
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+      - SA_PASSWORD=HIDDEN
+    volumes:
+      - mssqldata:/var/opt/mssql
+  notification_service:
+    build:
+      context: ./src
+      args:
+        project_name: Wolf.Notification
+    ports:
+      - 8080:8080
+    depends_on:
+      - "sql_express"
+      - "redis"
+    environment:
+      - ConnectionStrings__Redis=redis
+      - ConnectionStrings__NotificationDbContext=Server=sql_express;Initial Catalog=notification_v1;Persist Security Info=False;User ID=sa;Password=HIDDEN;Connection Timeout=30;
+      - ASPNETCORE_ENVIRONMENT=Production
+    command: dotnet /usr/local/app/Wolf.Notification.dll
+  notification_email_sender_inst1:
+    build:
+      context: ./src
+      args:
+        project_name: Wolf.Notification.EmailSender
+    depends_on:
+      - "notification_service"
+    environment:
+      - Runner__QueueConnectionString=redis
+      - Runner__QueueChannelName=email
+      - Smtp__Server=smtp.gmail.com
+      - Smtp__Username=myaccount@gmail.com
+      - Smtp__Password=HIDDEN
+      - Smtp__FromEmail=myaccount@gmail.com
+      - Smtp__Port=587
+      - NotifApi__BaseUrl=http://notification_service:8080
+      - NotifApi__UserAgentName=EmailSender
+      - NotifApi__AuthOptions__StsUrl=https://devid.mycompany.com
+      - NotifApi__AuthOptions__ClientId=notif_sender
+      - NotifApi__AuthOptions__ClientSecret=HIDDEN
+      - NotifApi__AuthOptions__Scope=notif_api
+    command: dotnet /usr/local/app/Wolf.Notification.EmailSender.dll
+  notification_email_sender_inst2:
+    build:
+      context: ./src
+      args:
+        project_name: Wolf.Notification.EmailSender
+    depends_on:
+      - "notification_service"
+    environment:
+      - Runner__QueueConnectionString=redis
+      - Runner__QueueChannelName=email
+      - Smtp__Server=smtp.gmail.com
+      - Smtp__Username=myaccount@gmail.com
+      - Smtp__Password=HIDDEN
+      - Smtp__FromEmail=myaccount@gmail.com
+      - Smtp__Port=587
+      - NotifApi__BaseUrl=http://notification_service:8080
+      - NotifApi__UserAgentName=EmailSender
+      - NotifApi__AuthOptions__StsUrl=https://devid.mycompany.com
+      - NotifApi__AuthOptions__ClientId=notif_sender
+      - NotifApi__AuthOptions__ClientSecret=HIDDEN
+      - NotifApi__AuthOptions__Scope=notif_api
+    command: dotnet /usr/local/app/Wolf.Notification.EmailSender.dll
+
+volumes:
+  mssqldata:

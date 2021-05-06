@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/obj": true,
+        "**/bin": true,
+        "**/Properties": true,
+        "**/wwwroot": true
+    }
+}

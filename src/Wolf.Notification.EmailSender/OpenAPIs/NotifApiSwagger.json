@@ -1,0 +1,1937 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Wolf Notification API",
+    "description": "Wolf API for Managing Notification Templates and Messages and for Message-delivery",
+    "contact": {
+      "name": "API",
+      "url": "https://www.zflows.com/"
+    },
+    "license": { },
+    "version": "v2.0"
+  },
+  "paths": {
+    "/Dashboard": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardSummary"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardSummary"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardSummary"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/Dashboard/timeseries": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTimeSeries"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTimeSeries"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTimeSeries"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/Dashboard/templates": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTemplate"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTemplate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.DashboardTemplate"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/health/details": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/message/{templateId}/preview": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Returns the compiled body and subject of the message.",
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "path",
+            "description": "Template ID (GUID)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template ID (GUID)",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/{templateName}/preview-by-name": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Returns the compiled body and subject of the message for a given Template Name.",
+        "parameters": [
+          {
+            "name": "templateName",
+            "in": "path",
+            "description": "Template Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template Name"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessagePreviewDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/{templateId}/send": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Compiles subject and body of message.await Saves to database. Posts event to queue",
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "path",
+            "description": "Template ID (GUID)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template ID (GUID)",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/{templateName}/send-by-name": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Compiles subject and body of message.await Saves to database. Posts event to queue",
+        "parameters": [
+          {
+            "name": "templateName",
+            "in": "path",
+            "description": "Template Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template Name"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.SendMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/filter": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Returns list of messages by criteria",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageRequest"
+                  }
+                ],
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.FilterMessageResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/{id}": {
+      "get": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Returns message by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Delete message and all unreferenced depenent objects by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/message/{id}/complete": {
+      "put": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Sets the DateSent on a message",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.UpdateMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.UpdateMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.UpdateMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.UpdateMessageRequest"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/template": {
+      "get": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Get All Templates",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Create new Template",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/template/{id}": {
+      "get": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Get Template by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Update Template",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateDto"
+                  }
+                ],
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateWIdDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Delete Template by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/template/{id}/recipient": {
+      "post": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Add a recipient to Template",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+                  }
+                ],
+                "description": "",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWIdDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWIdDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWIdDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    },
+    "/template/{id}/recipient/{recipientId}/{typeCode}": {
+      "delete": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Delete a Recipient",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "recipientId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "typeCode",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Wolf.Notification.Models.DashboardSummary": {
+        "type": "object",
+        "properties": {
+          "totalTemplates": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMessages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "successMessages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pendingMessages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.MsgTimeSeria": {
+        "type": "object",
+        "properties": {
+          "templateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dayDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "messageCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.TemplateIdNameDto": {
+        "type": "object",
+        "properties": {
+          "templateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "templateName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.DashboardTimeSeries": {
+        "type": "object",
+        "properties": {
+          "msgTimeSerias": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.MsgTimeSeria"
+            },
+            "nullable": true
+          },
+          "templates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateIdNameDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.DashboardTemplate": {
+        "type": "object",
+        "properties": {
+          "totalMessages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "successMessages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pendingMessages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "templateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "templateName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.RecipientDto": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.RecipientWTypeDto": {
+        "type": "object",
+        "properties": {
+          "typeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.SendMessageRequest": {
+        "type": "object",
+        "properties": {
+          "tokenValues": {
+            "type": "object",
+            "additionalProperties": { },
+            "description": "Optional dictionary of values to replace in the template",
+            "nullable": true
+          },
+          "providerCode": {
+            "type": "string",
+            "description": "Optional notification provider code. If not specified the one in template is used. If the field is not specified in the template an error is thrown.",
+            "nullable": true
+          },
+          "sender": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientDto"
+              }
+            ],
+            "description": "Optional Sender name/address. If not specified the one in template is used. If the field is not specified in the template an error is thrown.",
+            "nullable": true
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+            },
+            "description": "Optional list of Recipients. If not specified the one in template is used. If the field is not specified in the template an error is thrown.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.ProviderDto": {
+        "type": "object",
+        "properties": {
+          "providerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.MessagePreviewDto": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.ProviderDto"
+              }
+            ],
+            "nullable": true
+          },
+          "template": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateIdNameDto"
+              }
+            ],
+            "nullable": true
+          },
+          "tokenData": {
+            "type": "string",
+            "nullable": true
+          },
+          "sender": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientDto"
+              }
+            ],
+            "nullable": true
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+            },
+            "nullable": true
+          },
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "body": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.MessageDto": {
+        "type": "object",
+        "properties": {
+          "messageId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateProcessed": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateSent": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "provider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.ProviderDto"
+              }
+            ],
+            "nullable": true
+          },
+          "template": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.TemplateIdNameDto"
+              }
+            ],
+            "nullable": true
+          },
+          "tokenData": {
+            "type": "string",
+            "nullable": true
+          },
+          "sender": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientDto"
+              }
+            ],
+            "nullable": true
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+            },
+            "nullable": true
+          },
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "body": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.SortField": {
+        "enum": [
+          "Id",
+          "TemplateName",
+          "Subject",
+          "SenderAddress",
+          "SenderName",
+          "DateCreated",
+          "DateProcessed",
+          "DateSent"
+        ],
+        "type": "string"
+      },
+      "Wolf.Notification.Models.SortOrder": {
+        "enum": [
+          "Asc",
+          "Dec"
+        ],
+        "type": "string"
+      },
+      "Wolf.Notification.Models.SortCriteria": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.SortField"
+              }
+            ]
+          },
+          "order": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.SortOrder"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.FilterMessageRequest": {
+        "type": "object",
+        "properties": {
+          "templateNameContains": {
+            "type": "string",
+            "nullable": true
+          },
+          "subjectContains": {
+            "type": "string",
+            "nullable": true
+          },
+          "bodyContains": {
+            "type": "string",
+            "nullable": true
+          },
+          "allSearchContains": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfProcessingFrom": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateOfProcessingTo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateOfSendingFrom": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateOfSendingTo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sorting": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.SortCriteria"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.FilterMessageResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.MessageDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.UpdateMessageRequest": {
+        "type": "object",
+        "properties": {
+          "dateOfSending": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.RecipientWIdDto": {
+        "type": "object",
+        "properties": {
+          "recipientId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.RecipientWIdTypeDto": {
+        "type": "object",
+        "properties": {
+          "typeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipientId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.TemplateWIdDto": {
+        "type": "object",
+        "properties": {
+          "templateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "defaultFromRecipient": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWIdDto"
+              }
+            ],
+            "nullable": true
+          },
+          "defaultRecipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWIdTypeDto"
+            },
+            "nullable": true
+          },
+          "templateName": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateSubject": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateBody": {
+            "type": "string",
+            "nullable": true
+          },
+          "defaultProviderCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wolf.Notification.Models.TemplateDto": {
+        "type": "object",
+        "properties": {
+          "defaultFromRecipient": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientDto"
+              }
+            ],
+            "nullable": true
+          },
+          "defaultRecipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wolf.Notification.Models.RecipientWTypeDto"
+            },
+            "nullable": true
+          },
+          "templateName": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateSubject": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateBody": {
+            "type": "string",
+            "nullable": true
+          },
+          "defaultProviderCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "description": "Balea Server OpenId Security Scheme",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://devid.mycompany.com/connect/authorize",
+            "tokenUrl": "https://devid.mycompany.com/connect/token",
+            "scopes": {
+              "notif_api": "Wolf Notification Api Audience",
+              "openid": "OpenID"
+            }
+          }
+        }
+      }
+    }
+  }
+}

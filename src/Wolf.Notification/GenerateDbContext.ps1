@@ -1,0 +1,1 @@
+dotnet ef DbContext scaffold --context "NotifDbContext" --schema "notif" --no-onconfiguring "Server=localhost;Database=wolf;Trusted_connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Database\Entities -f
