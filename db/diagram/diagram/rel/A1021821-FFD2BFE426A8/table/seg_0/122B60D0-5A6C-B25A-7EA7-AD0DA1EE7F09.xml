@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="122B60D0-5A6C-B25A-7EA7-AD0DA1EE7F09" schemaObject="EC9D78E7-27FA-00C6-ABC4-776464342A13" name="recipient_type">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>98D9724C-5A21-A487-2658-C4E0C8B09FC3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="type_code" id="D08A6E9C-0464-B976-A6DE-49EFB04F93BE">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>A3F51672-053B-09EC-0413-6D50269D08DF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>96412B42-8C1B-F81E-2B22-5D77BD1922FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="3F626225-7112-2652-742E-59C2B7B746E9">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>3809091A-D6BC-6EA3-7EFE-884DDF5B4AD4</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>285809C9-AF66-084F-BCB5-E1E8169B8BED</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31AC420B-86D9-CF60-5CEF-E067CB6ADC0B" name="PK_recipient_type">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>1DE41AF4-2EBD-2EF1-4769-88E16A402C1D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D08A6E9C-0464-B976-A6DE-49EFB04F93BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

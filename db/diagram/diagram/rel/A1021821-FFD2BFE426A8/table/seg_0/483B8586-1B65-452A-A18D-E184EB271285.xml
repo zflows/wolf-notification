@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="483B8586-1B65-452A-A18D-E184EB271285" schemaObject="EC9D78E7-27FA-00C6-ABC4-776464342A13" name="recipient">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>47940DE2-1E89-20E0-E672-2F692CF8C7A8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="recipient_id" id="F8D5143D-A74B-A586-FE08-99C7344DD68C">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>9543B1AE-2310-2077-1207-7D06807EDF4B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<domain>8E2CE25F-67D9-7389-933B-F3878DF4DDC3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="538D2C89-3C22-CBE8-9AC7-FE4FDA65D783">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>9B1233E4-48F1-FF61-6E7C-0DD4CD87524A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>BFF117DE-C470-639C-3DA5-F57114B30176</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="3FF108E1-FFE0-FE0D-7F20-9C8BDC38BEFF">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>C0B3B353-03E0-DC3B-5E82-DF6DF471FA6B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>BFF117DE-C470-639C-3DA5-F57114B30176</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49C0C762-627B-D7FA-C886-009785212467" name="PK_recipient">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>C0713D69-3CFD-2E40-1C26-1AD4104A1D7A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8D5143D-A74B-A586-FE08-99C7344DD68C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

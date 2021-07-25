@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="recipient" directorySegmentName="seg_0" id="483B8586-1B65-452A-A18D-E184EB271285">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<schemaObject>EC9D78E7-27FA-00C6-ABC4-776464342A13</schemaObject>
+<database>DB_NULLELEMENT</database>
+<schema>A96AFC54-C24E-CD0C-95E9-0DAAE3D33F36</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="name" id="3FF108E1-FFE0-FE0D-7F20-9C8BDC38BEFF">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="address" id="538D2C89-3C22-CBE8-9AC7-FE4FDA65D783">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="recipient_id" id="F8D5143D-A74B-A586-FE08-99C7344DD68C">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<asIdentity>true</asIdentity>
+<identityForReplication>YES</identityForReplication>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_recipient" id="49C0C762-627B-D7FA-C886-009785212467">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<clustered>true</clustered>
+<partitioningColumn>43D4EF3D-E7B0-1516-6094-7677DB00BEDE</partitioningColumn>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D34490F3-711F-8A51-A48A-DA9543368FCD" schemaObject="EC9D78E7-27FA-00C6-ABC4-776464342A13" name="generated_message">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>0C64DA3D-79CD-64F4-EBB7-F936F8594592</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="message_id" id="96F3BB21-89E3-12E9-39EC-085B4CDE00D2">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>8F9F8605-C9E5-12F6-C069-22435AD355A3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<domain>EE40C52D-A496-9521-6691-0B65A86C6080</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A764CD9-1AFD-E4E7-C146-7B60FC16C56E" referredColumn="4C793504-D5D1-467E-71C4-DE56CC9264DF"/>
+</associations>
+</Column>
+<Column name="subject" id="CF9E6F42-72C2-481C-5A6B-EAA73F9F78E0">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>38A42AB6-356C-0E0F-BAB9-B77F05A61293</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>285809C9-AF66-084F-BCB5-E1E8169B8BED</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="body" id="59986C65-DD16-17D8-C91F-5CBAACC10A08">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>8AA2CBBF-E3E7-C78A-6BC9-55BCA1069E7D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>285809C9-AF66-084F-BCB5-E1E8169B8BED</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="410598DD-FC28-0F8D-2671-E8ABC651CC19" name="PK_generated_message">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>D405CE1C-A12D-5B0B-21C0-D4A94F72C118</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96F3BB21-89E3-12E9-39EC-085B4CDE00D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DBA6856-8865-AD4E-BCEB-D2200F12B14B" name="FK_generated_message_message">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96F3BB21-89E3-12E9-39EC-085B4CDE00D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="[notif].[generated_message]" directorySegmentName="seg_0" id="C57F60CD-9100-0EB9-FA83-BD02E0308696">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>F43D06B8-A3A4-088B-D458-81F2C289C445</importedID>
+<rule><![CDATA[CONSTRAINT [FK_generated_message_message]]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="WITH" directorySegmentName="seg_0" id="B574667C-2254-EA39-7AF9-E40A0390610E">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>85184B6C-C0D5-E4F1-9ECB-C13EE4D821D8</importedID>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

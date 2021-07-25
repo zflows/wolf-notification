@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagram" id="E11D81E1-5814-3A40-2BB6-2A03261EDF61" version="3.5">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:41:03 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E11D81E1-5814-3A40-2BB6-2A03261EDF61</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="4ECC7125-EEB8-CA8E-0DF8-E5CE458129A9">
+<designStoragePath>E:\notif.generated_messages</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaSqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SchemaSqlServerv2k5" name="notif" directorySegmentName="seg_0" id="A96AFC54-C24E-CD0C-95E9-0DAAE3D33F36">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:35 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+</SchemaSqlServerv2k5>

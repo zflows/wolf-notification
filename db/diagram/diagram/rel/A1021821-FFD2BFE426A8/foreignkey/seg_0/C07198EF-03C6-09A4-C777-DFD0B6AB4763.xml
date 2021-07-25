@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C07198EF-03C6-09A4-C777-DFD0B6AB4763" containerWithKeyObject="08C335CF-0194-0FB8-87CE-249431D880D5" localFKIndex="3E40BC05-525B-AF37-9725-9F7AABF06E8E" name="FK_template_provider">
+<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>5FF74A79-80AD-E312-E837-7299456C6EE3</importedID>
+<referredTableLongName>notif.provider</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>267FDAA8-66E8-8E81-3DA6-3A94B5CE96A7</referredTableID>
+<keyObject>8B63A95D-8B73-F5E5-6AA5-C08D186593BD</keyObject>
+<referredKeyID>8B63A95D-8B73-F5E5-6AA5-C08D186593BD</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>provider_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="A1021821-32BE-B3FD-AE8D-FFD2BFE426A8" mainViewID="4ABCD839-3678-0480-CD29-D9B7249F4EA7">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:41:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.generated_messages.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.message.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.message_recipient.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.provider.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.recipient.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.recipient_type.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.template.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>notif.template_recipient.sql</fileName>
+<pathName>E:\proj\wolf\wolf-notification\db\SQLServer\Gold</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

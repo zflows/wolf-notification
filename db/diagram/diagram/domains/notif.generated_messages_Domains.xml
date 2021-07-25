@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="notif.generated_messages_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_max" id="285809C9-AF66-084F-BCB5-E1E8169B8BED">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>max</dataTypeSize>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT037</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Datetime_0_0_0" id="62C9CF31-CBEE-7D7A-1BB7-F5176217F307">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="BIGINT_0_0_0" id="8E2CE25F-67D9-7389-933B-F3878DF4DDC3">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT027</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_25" id="96412B42-8C1B-F81E-2B22-5D77BD1922FF">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>25</dataTypeSize>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_512" id="A4F4F8DF-3C05-55F9-171E-7BA11FB0B31D">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>512</dataTypeSize>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_256" id="B88A1576-BB7B-4A46-DD59-796BA9EA11D4">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>256</dataTypeSize>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_1024" id="BFF117DE-C470-639C-3DA5-F57114B30176">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>1024</dataTypeSize>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT037</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="UNIQUEIDENTIFIER_0_0_0" id="EE40C52D-A496-9521-6691-0B65A86C6080">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>notif.generated_messages_Domains</fileName>
+<logicalDatatype>LOGDT057</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

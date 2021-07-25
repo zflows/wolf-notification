@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="notif" directorySegmentName="seg_0" id="EC9D78E7-27FA-00C6-ABC4-776464342A13">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<importedID>373C5CAA-9303-F978-493D-0B6D0686342E</importedID>
+</SchemaObject>

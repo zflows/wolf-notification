@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="generated_message" directorySegmentName="seg_0" id="D34490F3-711F-8A51-A48A-DA9543368FCD">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<schemaObject>EC9D78E7-27FA-00C6-ABC4-776464342A13</schemaObject>
+<database>DB_NULLELEMENT</database>
+<schema>A96AFC54-C24E-CD0C-95E9-0DAAE3D33F36</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="body" id="59986C65-DD16-17D8-C91F-5CBAACC10A08">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="message_id" id="96F3BB21-89E3-12E9-39EC-085B4CDE00D2">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="subject" id="CF9E6F42-72C2-481C-5A6B-EAA73F9F78E0">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_generated_message_message" id="0DBA6856-8865-AD4E-BCEB-D2200F12B14B">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>notif.generated_messages</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_generated_message" id="410598DD-FC28-0F8D-2671-E8ABC651CC19">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 16:49:50 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<clustered>true</clustered>
+<partitioningColumn>96F3BB21-89E3-12E9-39EC-085B4CDE00D2</partitioningColumn>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>
