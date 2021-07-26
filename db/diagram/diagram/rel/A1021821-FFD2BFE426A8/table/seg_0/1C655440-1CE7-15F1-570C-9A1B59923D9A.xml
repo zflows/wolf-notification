@@ -17,7 +17,7 @@
 <importedID>CEA08187-FF9C-3A73-948C-4EA16FC54EDD</importedID>
 <use>0</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
-<domain>EE40C52D-A496-9521-6691-0B65A86C6080</domain>
+<domain>55FF18D5-3720-40CF-4693-F77BFC7052B9</domain>
 <usesDefaultValue>true</usesDefaultValue>
 <defaultValue>(newid())</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -29,10 +29,12 @@
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <importedID>AC244460-5E8B-7597-F34E-A3358C76416C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
-<domain>EE40C52D-A496-9521-6691-0B65A86C6080</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>16</dataTypeSize>
+<domain>55FF18D5-3720-40CF-4693-F77BFC7052B9</domain>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="D2B090CD-629E-9876-5D2D-A1D8F15E2A6D" referredColumn="480F2D1F-BE89-9994-AA84-64F12386E32A"/>
@@ -156,7 +158,7 @@
 <colUsage columnID="A36A39A9-59D2-6834-EC3B-1F4DBA6E09D5"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B3A23CB4-97B8-8F55-7746-BD2AC88C6CED" name="message_template_template_id_fk">
+<ind_PK_UK id="B3A23CB4-97B8-8F55-7746-BD2AC88C6CED" name="message_template_id_fk">
 <createdBy>gzinger</createdBy>
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -191,27 +193,6 @@
 <ownerDesignName>diagram</ownerDesignName>
 <importedID>DC95D33D-66B3-8FDF-8529-FF796E830F5F</importedID>
 <rule><![CDATA[CONSTRAINT [message_template_template_id_fk]]]></rule>
-</tableCheckConstraint>
-<tableCheckConstraint name="WITH" directorySegmentName="seg_0" id="3212AA4C-947B-64F8-0176-13FFB85BF930">
-<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
-<createdBy>gzinger</createdBy>
-<createdTime>2021-07-25 16:49:50 UTC</createdTime>
-<ownerDesignName>diagram</ownerDesignName>
-<importedID>97F83DBE-A09F-7A54-C5FA-1770625E0616</importedID>
-</tableCheckConstraint>
-<tableCheckConstraint name="WITHv1" directorySegmentName="seg_0" id="26611780-B584-4BF8-28D9-FC58D5764165">
-<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
-<createdBy>gzinger</createdBy>
-<createdTime>2021-07-25 16:49:50 UTC</createdTime>
-<ownerDesignName>diagram</ownerDesignName>
-<importedID>21307529-A3DD-BD36-7D0A-DC868FAABF69</importedID>
-</tableCheckConstraint>
-<tableCheckConstraint name="WITHv2" directorySegmentName="seg_0" id="C2D0B9AC-75B5-8B0B-D3EF-21DDE7E6D138">
-<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
-<createdBy>gzinger</createdBy>
-<createdTime>2021-07-25 16:49:50 UTC</createdTime>
-<ownerDesignName>diagram</ownerDesignName>
-<importedID>9A86C92F-DDED-E3DD-9564-7A1F531FE204</importedID>
 </tableCheckConstraint>
 </tableCheckConstraints>
 </Table>

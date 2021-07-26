@@ -83,7 +83,7 @@
 <colUsage columnID="B0D79857-D81F-EF1D-8A0A-DB1B06E84D5B"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="0BAC73ED-FB47-2233-BEC2-57380F3BB8A7" name="FK_template_recipient_recipient">
+<ind_PK_UK id="0BAC73ED-FB47-2233-BEC2-57380F3BB8A7" name="FK_templ_recip_recip">
 <createdBy>gzinger</createdBy>
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -93,7 +93,7 @@
 <colUsage columnID="D1894DDA-DBD5-C167-C7A8-169943F1BD04"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="7284E047-EC35-B9A6-CD04-BF131C910CA1" name="FK_template_recipient_recipient_type">
+<ind_PK_UK id="7284E047-EC35-B9A6-CD04-BF131C910CA1" name="FK_templ_recip_recip_type">
 <createdBy>gzinger</createdBy>
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>

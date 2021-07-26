@@ -104,7 +104,7 @@
 <colUsage columnID="43D4EF3D-E7B0-1516-6094-7677DB00BEDE"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="802CA617-8606-B24C-6A05-F430833AA26E" name="FK_message_recipient_recipient_type">
+<ind_PK_UK id="802CA617-8606-B24C-6A05-F430833AA26E" name="FK_msg_recip_recip_type">
 <createdBy>gzinger</createdBy>
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>

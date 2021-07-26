@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="message_recipient" directorySegmentName="seg_0" id="07F8E0B7-22D8-8150-C54C-3F6114161E8F">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<schemaObject>EC9D78E7-27FA-00C6-ABC4-776464342A13</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>1EEFE155-D374-C2E1-6C25-85F74BD3014D</user>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="message_id" id="1FD3D68F-998B-2C05-0786-F1179B717452">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="recipient_id" id="43D4EF3D-E7B0-1516-6094-7677DB00BEDE">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="mr_id" id="7BDF327A-A3B3-7AD0-7859-148633CB2186">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="type_code" id="C59A9E01-ADE7-C3A4-7076-A5029CC3CBFB">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_message_recipient_message" id="217C49B9-B7C6-05E8-653E-4FCA1F3E0313">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_msg_recip_recip_type" id="802CA617-8606-B24C-6A05-F430833AA26E">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_message_recipient_recipient" id="C22005EC-312E-D83D-3192-3541B8B5D135">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_message_recipient" id="B12B3D25-3A82-DC1A-926C-6810E44F9611">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="WITHv2" id="1F4E15B6-66FE-EF07-F43C-03450167048B">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[message_recipient]v1" id="61F31E04-8231-0B4B-EEE1-207CB2414CE8">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="WITH" id="85DDB186-45B0-B78F-9925-CDD4CF7BB6C2">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[message_recipient]" id="C0D91FA5-6C50-C120-A8A0-EDC1AEABE554">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[message_recipient]v2" id="D234C340-E4BA-F953-55BA-7340F9077419">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="WITHv1" id="E585B38A-3AC8-97EA-B7E6-A7C36D5064EC">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

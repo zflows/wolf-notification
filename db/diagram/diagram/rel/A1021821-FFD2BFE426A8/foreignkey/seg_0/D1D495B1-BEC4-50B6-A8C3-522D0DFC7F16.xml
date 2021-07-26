@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1D495B1-BEC4-50B6-A8C3-522D0DFC7F16" containerWithKeyObject="07F8E0B7-22D8-8150-C54C-3F6114161E8F" localFKIndex="802CA617-8606-B24C-6A05-F430833AA26E" name="FK_message_recipient_recipient_type">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1D495B1-BEC4-50B6-A8C3-522D0DFC7F16" containerWithKeyObject="07F8E0B7-22D8-8150-C54C-3F6114161E8F" localFKIndex="802CA617-8606-B24C-6A05-F430833AA26E" name="FK_msg_recip_recip_type">
 <sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
 <createdBy>gzinger</createdBy>
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>

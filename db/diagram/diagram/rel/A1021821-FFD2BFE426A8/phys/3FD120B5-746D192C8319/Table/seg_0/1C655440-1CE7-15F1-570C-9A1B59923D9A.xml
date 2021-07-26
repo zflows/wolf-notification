@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="message" directorySegmentName="seg_0" id="1C655440-1CE7-15F1-570C-9A1B59923D9A">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<schemaObject>EC9D78E7-27FA-00C6-ABC4-776464342A13</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>1EEFE155-D374-C2E1-6C25-85F74BD3014D</user>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="template_id" id="08907993-4092-A460-B0FC-3428DE55CCD1">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="date_created" id="1C2891AD-161B-15A8-2058-CA6BBEDE1562">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<defaultValue>(sysdate)</defaultValue>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="date_processed" id="326A976F-4A30-6585-34C9-7E87A83D5A85">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="message_id" id="4C793504-D5D1-467E-71C4-DE56CC9264DF">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<defaultValue>(SYS_GUID())</defaultValue>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="token_data" id="9AA73555-4E53-67AE-5452-9A9EDA4404C4">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="from_recipient_id" id="A36A39A9-59D2-6834-EC3B-1F4DBA6E09D5">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="date_sent" id="D780E97A-6FC7-9AA2-11E1-808BDBE80D18">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="provider_code" id="D9C1E21B-8AD5-A0F3-A575-868D2F951F64">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_message_provider" id="24FCEE92-0846-8B0F-6448-A1249915089A">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_message_recipient" id="33864310-4D14-E545-BAC1-901D02BC927C">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="message_template_id_fk" id="B3A23CB4-97B8-8F55-7746-BD2AC88C6CED">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="message_pk" id="4A70682A-7DD2-858D-E45C-A8B195D3AF76">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="[notif].[message]" id="7BABB485-E07C-29D3-7093-A3E9C6E73C12">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[message]v1" id="7EC317E9-12A1-9D9E-7B06-57443F12CF70">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[message]v2" id="ED0429E1-F4FF-6B98-C9C7-555CAAC71BB4">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

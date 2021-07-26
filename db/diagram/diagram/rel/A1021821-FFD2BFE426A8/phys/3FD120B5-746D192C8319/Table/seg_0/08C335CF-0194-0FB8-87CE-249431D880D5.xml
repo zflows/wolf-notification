@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="template" directorySegmentName="seg_0" id="08C335CF-0194-0FB8-87CE-249431D880D5">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<schemaObject>EC9D78E7-27FA-00C6-ABC4-776464342A13</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>1EEFE155-D374-C2E1-6C25-85F74BD3014D</user>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="template_body" id="015D776D-E2B7-0A3F-BB17-898F81001DAF">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="template_id" id="480F2D1F-BE89-9994-AA84-64F12386E32A">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="template_name" id="52C5BA44-AC90-3E6D-E2D8-7EBB6F8F5C21">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="template_subject" id="59C2A513-BA44-0528-F039-2502ED32BDAC">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="default_provider_code" id="67C56D82-02A5-5A72-EBE8-34491D971160">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="default_from_recipient_id" id="D1F9F765-BD3F-E8C0-AC75-02D8B3246EA1">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_template_provider" id="3E40BC05-525B-AF37-9725-9F7AABF06E8E">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_template_recipient" id="4B7744E3-34A1-DE85-337A-FDF4FEEEF2F6">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_template" id="10EE8B79-6C94-898F-4FE7-8397065ED50F">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="[notif].[template]" id="3507BAE7-43A3-A893-4441-F64AE8463D56">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="[notif].[template]v1" id="C938EBE8-E002-3A13-8245-6FB1B44F2E8F">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="IU_template" id="9D3E8024-352E-C8E3-CBB9-54A6E62286E7">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-25 17:24:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

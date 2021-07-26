@@ -15,10 +15,12 @@
 <createdTime>2021-07-25 16:49:50 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <importedID>325E88FE-0FC1-8868-4540-2321A1F44BE3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
-<domain>EE40C52D-A496-9521-6691-0B65A86C6080</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>16</dataTypeSize>
+<domain>55FF18D5-3720-40CF-4693-F77BFC7052B9</domain>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="template_name" id="52C5BA44-AC90-3E6D-E2D8-7EBB6F8F5C21">
@@ -155,20 +157,6 @@
 <ownerDesignName>diagram</ownerDesignName>
 <importedID>65FD29CB-1437-333A-C49E-402C0DCBBDB2</importedID>
 <rule><![CDATA[CONSTRAINT [FK_template_recipient]]]></rule>
-</tableCheckConstraint>
-<tableCheckConstraint name="WITH" directorySegmentName="seg_0" id="5ED19CFC-ABDA-C899-C9FE-804548979601">
-<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
-<createdBy>gzinger</createdBy>
-<createdTime>2021-07-25 16:49:50 UTC</createdTime>
-<ownerDesignName>diagram</ownerDesignName>
-<importedID>9AA8DBE2-63F4-9247-1D9B-A70945F4E272</importedID>
-</tableCheckConstraint>
-<tableCheckConstraint name="WITHv1" directorySegmentName="seg_0" id="CC84E9EA-10E0-798D-3227-2F7DF6FAB173">
-<sourceDDLFile>notif.template_recipient.sql</sourceDDLFile>
-<createdBy>gzinger</createdBy>
-<createdTime>2021-07-25 16:49:50 UTC</createdTime>
-<ownerDesignName>diagram</ownerDesignName>
-<importedID>B974A8DF-4422-A789-32BD-9224B943A17A</importedID>
 </tableCheckConstraint>
 </tableCheckConstraints>
 </Table>

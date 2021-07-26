@@ -1,6 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="defaultdomains">
 <domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="UNQ_ID_CHAR_32" id="55FF18D5-3720-40CF-4693-F77BFC7052B9">
+<createdBy>gzinger</createdBy>
+<createdTime>2021-07-26 14:46:43 UTC</createdTime>
+<ownerDesignName>System</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<fileName>defaultdomains</fileName>
+<logicalDatatype>LOGDT057</logicalDatatype>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">
 <createdBy>gzinger</createdBy>
 <createdTime>2021-04-06 02:44:54 UTC</createdTime>
